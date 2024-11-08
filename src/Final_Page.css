@@ -1,0 +1,23 @@
+/* Final_Page.css */
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .ResultsPage {
+    padding: 20px;
+  }
+  

@@ -1,15 +1,16 @@
 const { spawn } = require('child_process');
 const path = require('path');
 
+// Function to handle the URL and number processing
 async function takeURL(req, res) {
   try {
     const { url, number } = req.body;
 
+    // Validate the incoming data
     if (!url || !number) {
       return res.status(400).json({ error: 'Both url and number are required' });
     }
 
-    // Log the received URL and number
     console.log(`Received URL: ${url}`);
     console.log(`Received Number: ${number}`);
 
@@ -20,36 +21,41 @@ async function takeURL(req, res) {
     const pythonProcess = spawn('python', [pythonScriptPath, url, number]);
 
     let pythonOutput = '';
+    
+    // Handle data coming from the Python process
     pythonProcess.stdout.on('data', (data) => {
-      pythonOutput += data.toString();
+      pythonOutput += data.toString();  // Accumulate data
     });
 
+    // Handle errors from the Python process
     pythonProcess.stderr.on('data', (data) => {
-      console.error(`Python error: ${data}`);
+      console.error(`Python error: ${data}`);  // Log error to console
     });
 
+    // After the Python process finishes execution
     pythonProcess.on('close', (code) => {
       if (code === 0) {
         console.log('Python script executed successfully');
         
-        // Parse the JSON result from the Python script output
-        let result = {};
+        // Attempt to parse the Python output as JSON
         try {
-          result = JSON.parse(pythonOutput);
+          const result = JSON.parse(pythonOutput);  // Parse output into JSON
+
+          // Return the result back to the client
+          res.status(200).json({ message: 'Data processed successfully', data: result });
         } catch (error) {
+          console.error('Error parsing Python output:', error);  // Log error if parsing fails
           return res.status(500).json({ error: 'Failed to parse Python output' });
         }
-
-        // Return the result back to the client
-        res.status(200).json({ message: 'Data processed successfully', data: result });
       } else {
-        res.status(500).json({ error: 'Python script failed' });
+        // Handle cases where the Python script fails
+        res.status(500).json({ error: 'Python script failed with code ' + code });
       }
     });
-    
   } catch (error) {
-    console.error('Error processing data:', error);
-    res.status(500).json({ error: 'An error occurred while processing the data' });
+    // Catch any errors that occur during execution
+    console.error('Error processing request:', error);
+    res.status(500).json({ error: 'An unexpected error occurred' });
   }
 }
 
