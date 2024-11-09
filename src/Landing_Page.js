@@ -1,6 +1,6 @@
 //Landing_Page.js
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import React, { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom'; 
 import './App.css';
 
 function Landing_Page() {
@@ -8,18 +8,44 @@ function Landing_Page() {
   const handleClick = async () => {
     navigate('/Input_Page');
   };
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === '#second-section') {
+      const scrollToSection = () => {
+        const section = document.getElementById('second-section');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+      setTimeout(scrollToSection, 10); // Delay to allow component rendering
+    }else if (location.hash === '#first-section') {
+      const scrollToSection = () => {
+        const section = document.getElementById('first-section');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+      setTimeout(scrollToSection, 10); // Delay to allow component rendering
+    }
+  }, [location]);
   // Function to scroll to the second section
-  const scrollToSection = () => {
+  const scrollToSection1 = () => {
+    document.getElementById('first-section').scrollIntoView({ behavior: 'smooth' });
+  };
+  const scrollToSection2 = () => {
     document.getElementById('second-section').scrollIntoView({ behavior: 'smooth' });
   };
   return (
     <div className="Landing_Page">
-      <div className="button-container">
-        <button className="universal-button">Contact Us</button>
-        <button className="universal-button" onClick={scrollToSection}>About Us</button>
-      </div>
       {/* First Section */}
-      <section className="first-section">
+      <div className="image-container1">
+        <img src={require('./Home.png')} alt="Illustration" className="side-image1" onClick={scrollToSection1} />
+      </div>
+      <div className="button-container1">
+        <button className="universal-button1">Contact Us</button>
+        <button className="universal-button1" onClick={scrollToSection2}>About Us</button>
+      </div>
+      <section id="first-section" className="first-section">
         <h1 className="main-heading">Welcome to my website</h1>
         <p className="sub-heading">Let's find the most frequent words</p>
         <button 
@@ -32,6 +58,13 @@ function Landing_Page() {
 
       {/* Second Section */}
       <section id="second-section" className="second-section">
+      <div className="image-container3">
+        <img src={require('./Home.png')} alt="Illustration" className="side-image3" onClick={scrollToSection1} />
+      </div>
+      <div className="button-container3">
+        <button className="universal-button3">Contact Us</button>
+        <button className="universal-button3" onClick={scrollToSection2}>About Us</button>
+      </div>
         <h2 className="second-heading">About This Tool</h2>
         <p className="second-subheading">
           This tool helps you find the most frequent words on a webpage. Simply enter a URL, 
@@ -41,5 +74,4 @@ function Landing_Page() {
     </div>
   );
 }
-
 export default Landing_Page;

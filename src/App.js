@@ -12,6 +12,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Landing_Page />} />
+          <Route path="/Landing_Page" element={<Landing_Page />} />
           <Route path="/Input_Page" element={<Input_Page />} />
           <Route path="/Final_Page" element={<Final_Page />} />
         </Routes>

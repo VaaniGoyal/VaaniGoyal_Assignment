@@ -10,7 +10,12 @@ function Input_Page() {
 
   const handleURLChange = (e) => setURL(e.target.value);
   const handleNumberChange = (e) => setNumber(e.target.value);
-
+  const handleAboutUsClick = () => {
+    navigate('/Landing_Page#second-section');
+  };
+  const handleHomeClick = () => {
+    navigate('/Landing_Page#first-section');
+  };
   const handleSubmit = async () => {
     try {
       // Define the backend URL
@@ -42,9 +47,12 @@ function Input_Page() {
 
   return (
     <div className="Input_Page">
-      <div className="button-container1">
-        <button className="universal-button1">Contact Us</button>
-        <button className="universal-button1">About Us</button>
+      <div className="image-container2">
+        <img src={require('./Home.png')} alt="Illustration" className="side-image2" onClick={handleHomeClick} />
+      </div>
+      <div className="button-container2">
+        <button className="universal-button2">Contact Us</button>
+        <button className="universal-button2" onClick={handleAboutUsClick}>About Us</button>
       </div>
       <h1 className="main-heading1">Finding the frequent words</h1>
       <p className="sub-heading1">Enter the required information</p>
@@ -78,8 +86,8 @@ function Input_Page() {
       >
       Submit
       </button>
-      <div className="image-container">
-        <img src={require('./image.png')} alt="Illustration" className="side-image" />
+      <div className="image-containering">
+        <img src={require('./image.png')} alt="Illustration" className="side-imageing" />
       </div>
     </div>
   );
