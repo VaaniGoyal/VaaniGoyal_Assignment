@@ -8,6 +8,8 @@ import json
 
 def process_input(url, number):
     try:
+        if not url.startswith(('http://', 'https://')):
+            url = 'https://' + url  # Default to 'https://'
         # Check if the input number is a valid integer
         number = number.strip()
         n = int(number)  # Convert to integer
