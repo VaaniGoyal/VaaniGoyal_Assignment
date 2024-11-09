@@ -1,12 +1,12 @@
 //Input_Page.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import { useNavigate } from 'react-router-dom'; 
 import './App.css';
 
 function Input_Page() {
   const [url, setURL] = useState('');
   const [number, setNumber] = useState('');
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
 
   const handleURLChange = (e) => setURL(e.target.value);
   const handleNumberChange = (e) => setNumber(e.target.value);

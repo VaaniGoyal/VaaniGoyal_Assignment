@@ -1,10 +1,11 @@
 /* App.css */
-/* -------------------------------------Landing Page-------------------------------------------------*/
 html, body {
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
-  height: 100%; /* Ensure the body takes full height */
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
 }
+/* -------------------------------------Landing Page-------------------------------------------------*/
+/* first section */
 .first-section {
   background-image: url('background1.png');
   background-size: cover;
@@ -13,18 +14,6 @@ html, body {
   padding: 0px;
   margin-top: 20px;
   min-height: 105vh; /* Ensures each section takes up the full viewport height */
-  box-sizing: border-box;
-  position: relative; /* Ensure content is positioned relative to the section */
-}
-
-.second-section {
-  background-image: url('background2.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 0px;
-  margin-top: 20px;
-  min-height: 100vh; /* Ensures each section takes up the full viewport height */
   box-sizing: border-box;
   position: relative; /* Ensure content is positioned relative to the section */
 }
@@ -96,6 +85,18 @@ html, body {
   object-fit: cover;
   z-index: 10;
 }
+/* second section */
+.second-section {
+  background-image: url('background2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0px;
+  margin-top: 20px;
+  min-height: 100vh; /* Ensures each section takes up the full viewport height */
+  box-sizing: border-box;
+  position: relative; /* Ensure content is positioned relative to the section */
+}
 .button-container2 {
   margin-top: -1.5rem;
   margin-left: 65rem;
@@ -153,6 +154,7 @@ html, body {
   left: 55%;
   height: 10%;
 }
+/* third section */
 .section-line {
   width: 100%;  /* Make the line span the full width */
   border: 0;    /* Remove default border */
@@ -164,12 +166,10 @@ html, body {
   text-align: left; /* Center the text */
   margin-top: -10px;
 }
-
 .email-link {
   color: #280d4a;  /* Change the color of the email link */
   text-decoration: none;  /* Remove the underline */
 }
-
 .email-link:hover {
   text-decoration: underline;  /* Add underline on hover */
 }
@@ -248,14 +248,12 @@ html, body {
   max-width: 500px; /* Set a max-width for the container */
   margin: 0 auto; /* Center the container horizontally */
 }
-
 .input-group {
   display: flex;
   flex-direction: center;
   justify-content: center;
   gap: 0px; /* Space between label and input */
 }
-
 .input-group label {
   font-size: 14px;
   font-weight: 600;
@@ -264,7 +262,6 @@ html, body {
   width: 20%;
   line-height: 2.5;
 }
-
 .input-box {
   padding: 10px;
   width: 100%; /* Make the input take the full width of the container */
@@ -274,7 +271,6 @@ html, body {
   border-radius: 5px;
   font-size: 16px;
 }
-
 .input-box:focus {
   border-color: #280d4a; /* Add a green border on focus */
   border-width: 2px;
@@ -353,7 +349,6 @@ html, body {
   flex-direction: column;
   padding: 20px;
 }
-
 .heading {
   font-size: 3em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -364,7 +359,6 @@ html, body {
   top: 2%; /* Slightly adjusted for a small gap from the top */
   transform: translateX(-50%); /* Corrects the centering by shifting the element to the left by 50% of its width */
 }
-
 table {
   width: 50%;
   margin: 100px auto 0; /* Adds space between heading and table */
@@ -372,7 +366,6 @@ table {
   border-color: #280d4a;
   text-align: center;
 }
-
 table th {
   padding: 10px;
   border: 1.5px solid #280d4a;
@@ -380,7 +373,6 @@ table th {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2em;
 }
-
 table td {
   padding: 10px;
   border: 1.5px solid #280d4a;
@@ -389,7 +381,6 @@ table td {
   font-weight: bold;
   font-size: 1.5em;
 }
-
 .submit-button1 {
   padding: 10px 20px;
   background-color: #7024ec;
@@ -402,8 +393,6 @@ table td {
   width: fit-content;
   margin: 20px auto 0; /* Ensures the button is below the table and centered */
 }
-
 .button-container {
   margin-top: 20px; /* Space between the table and button */
 }
-

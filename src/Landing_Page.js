@@ -17,7 +17,7 @@ function Landing_Page() {
           section.scrollIntoView({ behavior: 'smooth' });
         }
       };
-      setTimeout(scrollToSection, 10); // Delay to allow component rendering
+      setTimeout(scrollToSection, 10); 
     }else if (location.hash === '#first-section') {
       const scrollToSection = () => {
         const section = document.getElementById('first-section');
@@ -25,7 +25,7 @@ function Landing_Page() {
           section.scrollIntoView({ behavior: 'smooth' });
         }
       };
-      setTimeout(scrollToSection, 10); // Delay to allow component rendering
+      setTimeout(scrollToSection, 10); 
     }
     else if (location.hash === '#third-section') {
       const scrollToSection = () => {
@@ -34,10 +34,10 @@ function Landing_Page() {
           section.scrollIntoView({ behavior: 'smooth' });
         }
       };
-      setTimeout(scrollToSection, 10); // Delay to allow component rendering
+      setTimeout(scrollToSection, 10); 
     }
   }, [location]);
-  // Function to scroll to the second section
+  
   const scrollToSection1 = () => {
     document.getElementById('first-section').scrollIntoView({ behavior: 'smooth' });
   };
@@ -85,7 +85,7 @@ function Landing_Page() {
 
       {/* Third Section */}
       <section id="third-section" className="third-section">
-        <hr className="section-line" />  {/* Line between sections */}
+        <hr className="section-line" />  
         <div style={{ display: 'flex', alignItems: 'center', marginLeft: '30%' }}>
           <p className="query-text" style={{ marginTop: '2px', marginBottom: '2px' }}>
             For any query, mail us at :   
@@ -97,4 +97,3 @@ function Landing_Page() {
   );
 }
 export default Landing_Page;
-
