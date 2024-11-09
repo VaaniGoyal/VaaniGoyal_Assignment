@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Vaani Goyal (2201AI41) Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a full-stack web application that processes URLs to extract frequently occurring words. The application sends user-provided input from the frontend to the backend, where it is parsed, processed by a Python script, and returns the top frequent words. The results are then displayed on the frontend.
 
-## Available Scripts
+## Prerequisites
+- **Node.js**: Download and install from [Node.js official website](https://nodejs.org/).
+- **Python** (version 3.x): Download and install from [Python official website](https://www.python.org/).  
+  Ensure Python is added to your system's PATH.
 
-In the project directory, you can run:
+## Getting Started
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/your-project-name.git
+cd your-project-name
+```
 
-### `npm start`
+### 2. Install dependencies
+#### Frontend
+In your project directory, run the following to install the required libraries:
+```bash
+npm install
+npm install react-router-dom
+```
+#### Backend
+To run the backend, navigate to server directory and run the following to install the required libraries:
+```bash
+cd server
+npm install cors
+npm init -y
+npm install express body-parser path
+```
+#### Python
+To run python scripts, install the given dependencies, using:
+```bash
+pip install requests beautifulsoup4
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. Running the Application
+#### Backend
+To start the backend, run the following: 
+```bash
+cd server
+node server.js
+```
+#### Frontend
+To start the frontend, open another terminal and run:
+```bash
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
+```
+- backend/            # Backend codebase
+  - routes/           # API routes
+  - controllers/      # Controllers to handle backend logic
+  - scripts/          # Python scripts for content processing
+- frontend/           # Frontend codebase
+  - src/              # React application
+  - components/       # Reusable components
+```
 
-### `npm test`
+## Usage
+1. Visit the Input Page to submit a URL and the number of frequent words to retrieve.
+2. The backend processes the input, and results are displayed on the frontend.
+3. You can navigate to the 'About Us' section from the Input Page, which takes you to the second section of the Landing Page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
+- URL parsing to ensure compatibility in content processing.
+- Full-stack integration with Python backend for content analysis.
+- Universal navigation buttons across all pages, including a smooth scroll to sections on click.
 
-### `npm run build`
+## Contributing
+1. Fork the project.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This should cover all necessary installation steps and provide a clear guide for setup and use. Let me know if you need further customization!
