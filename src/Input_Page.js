@@ -42,6 +42,10 @@ function Input_Page() {
 
   return (
     <div className="Input_Page">
+      <div className="button-container1">
+        <button className="universal-button1">Contact Us</button>
+        <button className="universal-button1">About Us</button>
+      </div>
       <h1 className="main-heading1">Finding the frequent words</h1>
       <p className="sub-heading1">Enter the required information</p>
       <div className="input-container">
@@ -74,6 +78,9 @@ function Input_Page() {
       >
       Submit
       </button>
+      <div className="image-container">
+        <img src={require('./image.png')} alt="Illustration" className="side-image" />
+      </div>
     </div>
   );
 }

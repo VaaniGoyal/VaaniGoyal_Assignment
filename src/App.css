@@ -8,21 +8,28 @@ body {
   background-position: center;
   margin: 0; /* Removes margin to cover the full viewport */
 }
+.first-section, .second-section {
+  padding: 50px;
+  margin-top: 20px;
+  min-height: 100vh; /* Ensures each section takes up the full viewport height */
+  box-sizing: border-box;
+}
 .main-heading {
   font-size: 3.5em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #280d4a; /* Example color */
   font-weight: bold;
   position: absolute;
-  top: 15%;        /* Adjust the distance from the top */
+  top: 8%;        /* Adjust the distance from the top */
   left: 50%;       /* Centers horizontally */
   transform: translateX(-50%); /* Corrects the centering by shifting the element to the left by 50% of its width */
 }
 .sub-heading{
-  font-size: 1em;
+  font-size: 1.25em;
+  font-weight: bold;
   color: #826590;
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -31,7 +38,7 @@ body {
   background-color: #7024ec; /* Green background color */
   color: white; /* White text color */
   position: absolute;
-  top: 40%;
+  top: 37%;
   left: 50%;
   transform: translateX(-50%);
   border: none; /* Remove the default border */
@@ -39,7 +46,42 @@ body {
   font-size: 16px; /* Adjust font size */
   cursor: pointer; /* Cursor changes to pointer on hover */
 }
+.button-container {
+  margin-top: 0rem;
+  margin-left: 65rem;
+  display: flex;
+  gap: 35px;               /* Space between buttons */
+  background-color: transparent; /* Transparent so it matches page background */
+  position: sticky; /* Keeps it at the top when scrolling */
+}
+.universal-button {
+  padding: 0px 0px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #280d4a;
+}
 /* -------------------------------------Input Page-------------------------------------------------*/
+.button-container1 {
+  position: relative;
+  z-index: 10; /* Higher than other overlapping elements */
+  margin-top: -33rem;
+  margin-left: 63rem;
+  display: flex;
+  gap: 35px;               /* Space between buttons */
+  background-color: transparent; /* Transparent so it matches page background */
+  position: sticky; /* Keeps it at the top when scrolling */
+}
+.universal-button1 {
+  padding: 0px 0px;
+  font-size: 1rem;
+  font-weight: 300px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #280d4a;
+}
 .Input_Page {
   background-image: url('background1.png'); /* Different background for Input Page */
   background-size: cover;
@@ -123,6 +165,19 @@ body {
   border-radius: 12px; /* Rounded edges */
   font-size: 16px; /* Adjust font size */
   cursor: pointer; /* Cursor changes to pointer on hover */
+}
+.image-container {
+  max-width: 50%;
+  position: absolute;
+  left: 45%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.side-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 /*-----------------------------------Final Page----------------------------------------------------------*/
 .Final_Page {
