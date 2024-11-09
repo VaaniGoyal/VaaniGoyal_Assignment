@@ -8,6 +8,12 @@ function Final_Page() {
   const handleSearch = async () => {
     navigate('/Input_Page');
   };
+  const handleAboutUsClick = () => {
+    navigate('/Landing_Page#second-section');
+  };
+  const handleHomeClick = () => {
+    navigate('/Landing_Page#first-section');
+  };
   const location = useLocation();
   const { result } = location.state || {};  // Destructure data from state
   console.log(result);
@@ -16,6 +22,13 @@ function Final_Page() {
   }
   return (
     <div className="Final_Page">
+      <div className="image-container4">
+        <img src={require('./Home.png')} alt="Illustration" className="side-image4" onClick={handleHomeClick} />
+      </div>
+      <div className="button-container4">
+        <button className="universal-button4">Contact Us</button>
+        <button className="universal-button4" onClick={handleAboutUsClick}>About Us</button>
+      </div>
       <h1 className="heading">Most Frequent Words</h1>
       <table>
         <thead>

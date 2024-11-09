@@ -79,8 +79,8 @@ body {
   z-index: 10;
 }
 .button-container3 {
-  margin-top: 0rem;
-  margin-left: 65rem;
+  margin-top: -1.5rem;
+  margin-left: 61rem;
   display: flex;
   gap: 35px;               /* Space between buttons */
   background-color: transparent; /* Transparent so it matches page background */
@@ -97,7 +97,7 @@ body {
 .image-container3 {
   max-width: 100%;
   position: absolute;
-  top: 1.5%;
+  top: 115%;
   left: -0.5%;
   flex: 1;
   display: flex;
@@ -246,6 +246,41 @@ body {
   object-fit: cover;
 }
 /*-----------------------------------Final Page----------------------------------------------------------*/
+.image-container4 {
+  max-width: 30%;
+  position: absolute;
+  top: 2%;
+  left: -0.5%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.side-image4 {
+  max-width: 30%;
+  height: auto;
+  object-fit: cover;
+  z-index: 10;
+  cursor: pointer;
+}
+.button-container4 {
+  position: relative;
+  z-index: 10; /* Higher than other overlapping elements */
+  margin-top: 0rem;
+  margin-left: 63rem;
+  display: flex;
+  gap: 35px;               /* Space between buttons */
+  background-color: transparent; /* Transparent so it matches page background */
+  position: sticky; /* Keeps it at the top when scrolling */
+}
+.universal-button4 {
+  padding: 0px 0px;
+  font-size: 1rem;
+  font-weight: 300px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #280d4a;
+}
 .Final_Page {
   background-image: url('background1.png'); /* Background for Input Page */
   background-size: cover; /* Make sure the image covers the whole page */
