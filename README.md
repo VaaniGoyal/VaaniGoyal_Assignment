@@ -11,7 +11,7 @@ This project is a full-stack web application that processes URLs to extract freq
 ## Getting Started
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/VaaniGoyal/VaaniGoyal_Assignment.git]
+git clone https://github.com/VaaniGoyal/VaaniGoyal_Assignment.git
 cd VaaniGoyal_Assignment
 ```
 
