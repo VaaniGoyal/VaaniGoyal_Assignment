@@ -16,6 +16,9 @@ function Input_Page() {
   const handleHomeClick = () => {
     navigate('/Landing_Page#first-section');
   };
+  const handleContactUsClick = () => {
+    navigate('/Landing_Page#third-section');
+  };
   const handleSubmit = async () => {
     try {
       // Define the backend URL
@@ -51,7 +54,7 @@ function Input_Page() {
         <img src={require('./Home.png')} alt="Illustration" className="side-image3" onClick={handleHomeClick} />
       </div>
       <div className="button-container3">
-        <button className="universal-button3">Contact Us</button>
+        <button className="universal-button3" onClick={handleContactUsClick}>Contact Us</button>
         <button className="universal-button3" onClick={handleAboutUsClick}>About Us</button>
       </div>
       <h1 className="main-heading2">Finding the frequent words</h1>

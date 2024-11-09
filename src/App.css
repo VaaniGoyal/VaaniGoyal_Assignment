@@ -131,6 +131,48 @@ html, body {
   opacity: 1 !important;
   object-fit: cover;
 }
+.image-blur {
+  display: flex;
+  justify-content: space-between; /* Distribute space between the images */
+  align-items: center;            /* Vertically center images */
+}
+.image-blur img {
+  width: 450px;  /* Set desired width */
+  height: 350px; /* Set desired height */   
+  margin: 10px;  /* Optional margin between images */
+}
+.side-blur1 {
+  position: absolute;
+  top: 25%;
+  left: 7%;
+  height: 50%;
+}
+.side-blur2 {
+  position: absolute;
+  top:25%;
+  left: 55%;
+  height: 10%;
+}
+.section-line {
+  width: 100%;  /* Make the line span the full width */
+  border: 0;    /* Remove default border */
+  border-top: 4px solid #ccc;  /* Create a light gray line */
+  margin: 0 0;  /* Space above and below the line */
+}
+.query-text {
+  font-size: 18px;  /* Adjust the font size */
+  text-align: left; /* Center the text */
+  margin-top: -10px;
+}
+
+.email-link {
+  color: #280d4a;  /* Change the color of the email link */
+  text-decoration: none;  /* Remove the underline */
+}
+
+.email-link:hover {
+  text-decoration: underline;  /* Add underline on hover */
+}
 /* -------------------------------------Input Page-------------------------------------------------*/
 .image-container3 {
   max-width: 30%;
