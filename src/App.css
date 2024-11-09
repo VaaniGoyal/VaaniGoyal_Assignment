@@ -1,4 +1,5 @@
 /* App.css */
+/* -------------------------------------Landing Page-------------------------------------------------*/
 body {
   background-image: url('background.png'); /* Ensure the path is correct */
   background-size: 100% 100%; /* Stretch both horizontally and vertically */
@@ -7,7 +8,6 @@ body {
   background-position: center;
   margin: 0; /* Removes margin to cover the full viewport */
 }
-
 .main-heading {
   font-size: 3.5em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -39,3 +39,154 @@ body {
   font-size: 16px; /* Adjust font size */
   cursor: pointer; /* Cursor changes to pointer on hover */
 }
+/* -------------------------------------Input Page-------------------------------------------------*/
+.Input_Page {
+  background-image: url('background1.png'); /* Different background for Input Page */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Make the input page take full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-heading1 {
+  font-size: 3.5em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #280d4a; /* Example color */
+  font-weight: bold;
+  position: absolute;
+  top: 20%;        /* Adjust the distance from the top */
+  left: 29%;       /* Centers horizontally */
+  transform: translateX(-50%); /* Corrects the centering by shifting the element to the left by 50% of its width */
+}
+.sub-heading1{
+  font-size: 1.25em;
+  color: #826590;
+  position: absolute;
+  top: 35%;
+  left: 13.8%;
+  transform: translateX(-50%);
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  gap: 20px; /* Add spacing between the input groups */
+  width: 30%; /* Ensure it uses the full width */
+  max-width: 500px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  gap: 0px; /* Space between label and input */
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #280d4a;
+  text-align: center;
+  width: 20%;
+  line-height: 2.5;
+}
+
+.input-box {
+  padding: 10px;
+  width: 100%; /* Make the input take the full width of the container */
+  max-width: 100%; /* Ensure it doesn't go beyond the container */
+  box-sizing: border-box; /* To include padding in the width calculation */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-box:focus {
+  border-color: #280d4a; /* Add a green border on focus */
+  border-width: 2px;
+  outline: none;
+}
+.submit-button {
+  padding: 10px 20px; /* Adjust the padding to increase/decrease the button size */
+  background-color: #280d4a; /* Green background color */
+  color: white; /* White text color */
+  position: absolute;
+  top: 75%;
+  left: 20%;
+  transform: translateX(-50%);
+  border: none; /* Remove the default border */
+  border-radius: 12px; /* Rounded edges */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+}
+/*-----------------------------------Final Page----------------------------------------------------------*/
+.Final_Page {
+  background-image: url('background1.png'); /* Background for Input Page */
+  background-size: cover; /* Make sure the image covers the whole page */
+  background-position: center;
+  min-height: 200vh; /* Ensure at least the full viewport height */
+  display: flex;
+  justify-content: flex-start; /* Align content from the top */
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #280d4a; /* Example color */
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 2%; /* Slightly adjusted for a small gap from the top */
+  transform: translateX(-50%); /* Corrects the centering by shifting the element to the left by 50% of its width */
+}
+
+table {
+  width: 50%;
+  margin: 100px auto 0; /* Adds space between heading and table */
+  border-collapse: collapse;
+  border-color: #280d4a;
+  text-align: center;
+}
+
+table th {
+  padding: 10px;
+  border: 1.5px solid #280d4a;
+  color: #280d4a;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+}
+
+table td {
+  padding: 10px;
+  border: 1.5px solid #280d4a;
+  font-family: 'Times New Roman', Times, serif;
+  color: #333333;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.submit-button1 {
+  padding: 10px 20px;
+  background-color: #7024ec;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0; /* Ensures the button is below the table and centered */
+}
+
+.button-container {
+  margin-top: 20px; /* Space between the table and button */
+}
+

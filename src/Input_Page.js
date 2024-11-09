@@ -1,4 +1,4 @@
-//Landing_Page.js
+//Input_Page.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import './App.css';
@@ -42,15 +42,24 @@ function Input_Page() {
 
   return (
     <div className="Input_Page">
-        <div className="input-container">
+      <h1 className="main-heading1">Finding the frequent words</h1>
+      <p className="sub-heading1">Enter the required information</p>
+      <div className="input-container">
+        <div className="input-group">
+          <label htmlFor="url">URL:</label>
           <input
+            id="url"
             type="text"
             placeholder="Enter URL"
             value={url}
             onChange={handleURLChange}
             className="input-box"
           />
+        </div>
+        <div className="input-group">
+          <label htmlFor="number">Number:</label>
           <input
+            id="number"
             type="text"
             placeholder="Enter Number"
             value={number}
@@ -58,13 +67,13 @@ function Input_Page() {
             className="input-box"
           />
         </div>
-        
-        <button
-          onClick={handleSubmit}
-          className="submit-button"
-        >
-          Submit
-        </button>
+      </div>
+      <button
+        onClick={handleSubmit}
+        className="submit-button"
+      >
+      Submit
+      </button>
     </div>
   );
 }
