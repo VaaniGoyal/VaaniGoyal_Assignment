@@ -11,8 +11,8 @@ This project is a full-stack web application that processes URLs to extract freq
 ## Getting Started
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/your-project-name.git
-cd your-project-name
+git clone [https://github.com/VaaniGoyal/VaaniGoyal_Assignment.git]
+cd VaaniGoyal_Assignment
 ```
 
 ### 2. Install dependencies
@@ -51,19 +51,17 @@ npm start
 
 ## Project Structure
 ```
-- backend/            # Backend codebase
-  - routes/           # API routes
-  - controllers/      # Controllers to handle backend logic
-  - scripts/          # Python scripts for content processing
-- frontend/           # Frontend codebase
-  - src/              # React application
-  - components/       # Reusable components
+- server/            # Backend codebase
+  - controller.js       # Controller to handle backend logic
+  - process_input.py    # Python script for content processing
+  - routes.js           # API route
+  - server.js/          # main server file
+- src/              # Frontend codebase
 ```
 
 ## Usage
 1. Visit the Input Page to submit a URL and the number of frequent words to retrieve.
 2. The backend processes the input, and results are displayed on the frontend.
-3. You can navigate to the 'About Us' section from the Input Page, which takes you to the second section of the Landing Page.
 
 ## Features
 - URL parsing to ensure compatibility in content processing.
@@ -77,6 +75,3 @@ npm start
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a pull request.
 
----
-
-This should cover all necessary installation steps and provide a clear guide for setup and use. Let me know if you need further customization!
