@@ -47,15 +47,15 @@ function Input_Page() {
 
   return (
     <div className="Input_Page">
-      <div className="image-container2">
-        <img src={require('./Home.png')} alt="Illustration" className="side-image2" onClick={handleHomeClick} />
+      <div className="image-container3">
+        <img src={require('./Home.png')} alt="Illustration" className="side-image3" onClick={handleHomeClick} />
       </div>
-      <div className="button-container2">
-        <button className="universal-button2">Contact Us</button>
-        <button className="universal-button2" onClick={handleAboutUsClick}>About Us</button>
+      <div className="button-container3">
+        <button className="universal-button3">Contact Us</button>
+        <button className="universal-button3" onClick={handleAboutUsClick}>About Us</button>
       </div>
-      <h1 className="main-heading1">Finding the frequent words</h1>
-      <p className="sub-heading1">Enter the required information</p>
+      <h1 className="main-heading2">Finding the frequent words</h1>
+      <p className="sub-heading2">Enter the required information</p>
       <div className="input-container">
         <div className="input-group">
           <label htmlFor="url">URL:</label>

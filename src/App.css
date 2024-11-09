@@ -1,20 +1,34 @@
 /* App.css */
 /* -------------------------------------Landing Page-------------------------------------------------*/
-body {
-  background-image: url('background.png'); /* Ensure the path is correct */
-  background-size: 100% 100%; /* Stretch both horizontally and vertically */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  margin: 0; /* Removes margin to cover the full viewport */
+html, body {
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  height: 100%; /* Ensure the body takes full height */
 }
-.first-section, .second-section {
-  padding: 50px;
+.first-section {
+  background-image: url('background1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0px;
+  margin-top: 20px;
+  min-height: 105vh; /* Ensures each section takes up the full viewport height */
+  box-sizing: border-box;
+  position: relative; /* Ensure content is positioned relative to the section */
+}
+
+.second-section {
+  background-image: url('background2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0px;
   margin-top: 20px;
   min-height: 100vh; /* Ensures each section takes up the full viewport height */
   box-sizing: border-box;
+  position: relative; /* Ensure content is positioned relative to the section */
 }
-.main-heading {
+.main-heading1 {
   font-size: 3.5em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #280d4a; /* Example color */
@@ -23,8 +37,9 @@ body {
   top: 8%;        /* Adjust the distance from the top */
   left: 50%;       /* Centers horizontally */
   transform: translateX(-50%); /* Corrects the centering by shifting the element to the left by 50% of its width */
+  z-index: 10;
 }
-.sub-heading{
+.sub-heading1 {
   font-size: 1.25em;
   font-weight: bold;
   color: #826590;
@@ -32,6 +47,7 @@ body {
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 .try-now {
   padding: 10px 20px; /* Adjust the padding to increase/decrease the button size */
@@ -45,16 +61,18 @@ body {
   border-radius: 12px; /* Rounded edges */
   font-size: 16px; /* Adjust font size */
   cursor: pointer; /* Cursor changes to pointer on hover */
+  z-index: 10;
 }
 .button-container1 {
-  margin-top: 1rem;
+  margin-top: -1.5rem;
   margin-left: 65rem;
   display: flex;
   gap: 35px;               /* Space between buttons */
-  background-color: transparent; /* Transparent so it matches page background */
+  background: none; /* Transparent so it matches page background */
   position: sticky; /* Keeps it at the top when scrolling */
 }
 .universal-button1 {
+  margin-top: 1rem;
   padding: 0px 0px;
   font-size: 1rem;
   cursor: pointer;
@@ -65,7 +83,7 @@ body {
 .image-container1 {
   max-width: 30%;
   position: absolute;
-  top: 1.5%;
+  top: 2%;
   left: -0.5%;
   flex: 1;
   display: flex;
@@ -78,15 +96,16 @@ body {
   object-fit: cover;
   z-index: 10;
 }
-.button-container3 {
+.button-container2 {
   margin-top: -1.5rem;
-  margin-left: 61rem;
+  margin-left: 65rem;
   display: flex;
   gap: 35px;               /* Space between buttons */
-  background-color: transparent; /* Transparent so it matches page background */
+  background: none; /* Transparent so it matches page background */
   position: sticky; /* Keeps it at the top when scrolling */
 }
-.universal-button3 {
+.universal-button2 {
+  margin-top: 1rem;
   padding: 0px 0px;
   font-size: 1rem;
   cursor: pointer;
@@ -94,16 +113,16 @@ body {
   border: none;
   color: #280d4a;
 }
-.image-container3 {
+.image-container2 {
   max-width: 100%;
   position: absolute;
-  top: 115%;
+  top: 2%;
   left: -0.5%;
   flex: 1;
   display: flex;
   justify-content: center;
 }
-.side-image3 {
+.side-image2 {
   cursor: pointer;
   z-index: 10;
   max-width: 30%;
@@ -113,7 +132,7 @@ body {
   object-fit: cover;
 }
 /* -------------------------------------Input Page-------------------------------------------------*/
-.image-container2 {
+.image-container3 {
   max-width: 30%;
   position: absolute;
   top: 2%;
@@ -122,14 +141,14 @@ body {
   display: flex;
   justify-content: center;
 }
-.side-image2 {
+.side-image3 {
   max-width: 30%;
   height: auto;
   object-fit: cover;
   z-index: 10;
   cursor: pointer;
 }
-.button-container2 {
+.button-container3 {
   position: relative;
   z-index: 10; /* Higher than other overlapping elements */
   margin-top: -33.5rem;
@@ -139,7 +158,7 @@ body {
   background-color: transparent; /* Transparent so it matches page background */
   position: sticky; /* Keeps it at the top when scrolling */
 }
-.universal-button2 {
+.universal-button3 {
   padding: 0px 0px;
   font-size: 1rem;
   font-weight: 300px;
@@ -149,7 +168,7 @@ body {
   color: #280d4a;
 }
 .Input_Page {
-  background-image: url('background1.png'); /* Different background for Input Page */
+  background-image: url('background3.png'); /* Different background for Input Page */
   background-size: cover;
   background-position: center;
   height: 100vh; /* Make the input page take full height */
@@ -158,7 +177,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.main-heading1 {
+.main-heading2 {
   font-size: 3.5em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #280d4a; /* Example color */
@@ -168,7 +187,7 @@ body {
   left: 29%;       /* Centers horizontally */
   transform: translateX(-50%); /* Corrects the centering by shifting the element to the left by 50% of its width */
 }
-.sub-heading1{
+.sub-heading2{
   font-size: 1.25em;
   color: #826590;
   position: absolute;
@@ -282,7 +301,7 @@ body {
   color: #280d4a;
 }
 .Final_Page {
-  background-image: url('background1.png'); /* Background for Input Page */
+  background-image: url('background3.png'); /* Background for Input Page */
   background-size: cover; /* Make sure the image covers the whole page */
   background-position: center;
   min-height: 200vh; /* Ensure at least the full viewport height */

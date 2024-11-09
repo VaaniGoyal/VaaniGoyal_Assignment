@@ -36,8 +36,9 @@ function Landing_Page() {
     document.getElementById('second-section').scrollIntoView({ behavior: 'smooth' });
   };
   return (
-    <div className="Landing_Page">
+    <div>
       {/* First Section */}
+      <section id="first-section" className="first-section">
       <div className="image-container1">
         <img src={require('./Home.png')} alt="Illustration" className="side-image1" onClick={scrollToSection1} />
       </div>
@@ -45,9 +46,8 @@ function Landing_Page() {
         <button className="universal-button1">Contact Us</button>
         <button className="universal-button1" onClick={scrollToSection2}>About Us</button>
       </div>
-      <section id="first-section" className="first-section">
-        <h1 className="main-heading">Welcome to my website</h1>
-        <p className="sub-heading">Let's find the most frequent words</p>
+        <h1 className="main-heading1">Welcome to my website</h1>
+        <p className="sub-heading1">Let's find the most frequent words</p>
         <button 
           onClick={handleClick}
           className="try-now"
@@ -58,12 +58,12 @@ function Landing_Page() {
 
       {/* Second Section */}
       <section id="second-section" className="second-section">
-      <div className="image-container3">
-        <img src={require('./Home.png')} alt="Illustration" className="side-image3" onClick={scrollToSection1} />
+      <div className="image-container2">
+        <img src={require('./Home.png')} alt="Illustration" className="side-image2" onClick={scrollToSection1} />
       </div>
-      <div className="button-container3">
-        <button className="universal-button3">Contact Us</button>
-        <button className="universal-button3" onClick={scrollToSection2}>About Us</button>
+      <div className="button-container2">
+        <button className="universal-button2">Contact Us</button>
+        <button className="universal-button2" onClick={scrollToSection2}>About Us</button>
       </div>
         <h2 className="second-heading">About This Tool</h2>
         <p className="second-subheading">
